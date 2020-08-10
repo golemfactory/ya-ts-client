@@ -1,5 +1,7 @@
 build-scripts/
+golem-client/
 patches/
+node_modules/
 src/
 target/
 ya-client/

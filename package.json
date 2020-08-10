@@ -10,7 +10,7 @@
         "build": "tsc",
         "test": "node ./index.js"
     },
-    "author": "OpenAPI-Generator Contributors",
+    "author": "Golem Team <tech@golem.network>",
     "license": "Unlicense",
     "dependencies": {
         "bluebird": "^3.5.0",
