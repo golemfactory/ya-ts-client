@@ -1,0 +1,75 @@
+diff -r -c target/ya-activity/api/providerApi.ts src/ya-activity/api/providerApi.ts
+*** target/ya-activity/api/providerApi.ts	2020-08-05 10:10:11.000000000 +0200
+--- src/ya-activity/api/providerApi.ts	2020-07-30 20:58:22.000000000 +0200
+***************
+*** 15,21 ****
+  
+  /* tslint:disable:no-unused-locals */
+  import { ActivityState } from '../model/activityState';
+! import { CreateActivity | DestroyActivity | GetActivityState | GetActivityUsage } from '../model/createActivity | DestroyActivity | GetActivityState | GetActivityUsage';
+  import { ErrorMessage } from '../model/errorMessage';
+  
+  import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
+--- 15,24 ----
+  
+  /* tslint:disable:no-unused-locals */
+  import { ActivityState } from '../model/activityState';
+! import { CreateActivity } from '../model/createActivity';
+! import { DestroyActivity } from '../model/DestroyActivity';
+! import { GetActivityState } from '../model/GetActivityState';
+! import { GetActivityUsage } from '../model/GetActivityUsage';
+  import { ErrorMessage } from '../model/errorMessage';
+  
+  import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
+Only in src/ya-activity: node_modules
+diff -r -c target/ya-activity/package.json src/ya-activity/package.json
+*** target/ya-activity/package.json	2020-08-05 10:10:12.000000000 +0200
+--- src/ya-activity/package.json	2020-08-05 10:00:38.000000000 +0200
+***************
+*** 3,14 ****
+      "version": "0.1.0",
+      "description": "NodeJS client for ya-activity",
+      "repository": "GIT_USER_ID/GIT_REPO_ID",
+!     "main": "dist/api.js",
+!     "types": "dist/api.d.ts",
+      "scripts": {
+          "clean": "rm -Rf node_modules/ *.js",
+          "build": "tsc",
+!         "test": "npm run build && node dist/client.js"
+      },
+      "author": "OpenAPI-Generator Contributors",
+      "license": "Unlicense",
+--- 3,14 ----
+      "version": "0.1.0",
+      "description": "NodeJS client for ya-activity",
+      "repository": "GIT_USER_ID/GIT_REPO_ID",
+!     "main": "./api.js",
+!     "types": "./api.d.ts",
+      "scripts": {
+          "clean": "rm -Rf node_modules/ *.js",
+          "build": "tsc",
+!         "test": "npm run build && node ./api.js"
+      },
+      "author": "OpenAPI-Generator Contributors",
+      "license": "Unlicense",
+diff -r -c target/ya-activity/tsconfig.json src/ya-activity/tsconfig.json
+*** target/ya-activity/tsconfig.json	2020-08-05 10:10:12.000000000 +0200
+--- src/ya-activity/tsconfig.json	2020-07-30 20:58:22.000000000 +0200
+***************
+*** 11,17 ****
+          "noLib": false,
+          "declaration": true,
+          "lib": ["dom", "es6", "es5", "dom.iterable", "scripthost"],
+!         "outDir": "dist",
+          "typeRoots": [
+              "node_modules/@types"
+          ]
+--- 11,17 ----
+          "noLib": false,
+          "declaration": true,
+          "lib": ["dom", "es6", "es5", "dom.iterable", "scripthost"],
+!         "outDir": "../../dist/ya-activity",
+          "typeRoots": [
+              "node_modules/@types"
+          ]
+Only in src/ya-activity: yarn.lock

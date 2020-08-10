@@ -1,0 +1,8 @@
+build-scripts/
+patches/
+src/
+target/
+ya-client/
+m.*
+*.lock
+Makefile
