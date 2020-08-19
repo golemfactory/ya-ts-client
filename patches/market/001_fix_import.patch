@@ -15,8 +15,8 @@ diff -r -c target/ya-market/api/providerApi.ts src/ya-market/api/providerApi.ts
   /* tslint:disable:no-unused-locals */
   import { Agreement } from '../model/agreement';
 ! import { AgreementEvent } from '../model/agreementEvent';
-! import { ProposalEvent } from '../model/ProposalEvent';
-! import { PropertyQueryEvent } from '../model/PropertyQueryEvent';
+! import { ProposalEvent } from '../model/proposalEvent';
+! import { PropertyQueryEvent } from '../model/propertyQueryEvent';
   import { ErrorMessage } from '../model/errorMessage';
   import { Offer } from '../model/offer';
   import { Proposal } from '../model/proposal';
@@ -37,7 +37,7 @@ diff -r -c target/ya-market/api/requestorApi.ts src/ya-market/api/requestorApi.t
   import { ErrorMessage } from '../model/errorMessage';
   import { Proposal } from '../model/proposal';
 ! import { ProposalEvent } from '../model/proposalEvent';
-! import { PropertyQueryEvent } from '../model/PropertyQueryEvent';
+! import { PropertyQueryEvent } from '../model/propertyQueryEvent';
   
   import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
   import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';

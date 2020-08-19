@@ -15,9 +15,9 @@ diff -r -c target/ya-activity/api/providerApi.ts src/ya-activity/api/providerApi
   /* tslint:disable:no-unused-locals */
   import { ActivityState } from '../model/activityState';
 ! import { CreateActivity } from '../model/createActivity';
-! import { DestroyActivity } from '../model/DestroyActivity';
-! import { GetActivityState } from '../model/GetActivityState';
-! import { GetActivityUsage } from '../model/GetActivityUsage';
+! import { DestroyActivity } from '../model/destroyActivity';
+! import { GetActivityState } from '../model/getActivityState';
+! import { GetActivityUsage } from '../model/getActivityUsage';
   import { ErrorMessage } from '../model/errorMessage';
   
   import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
