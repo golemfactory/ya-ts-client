@@ -23,13 +23,12 @@ gen() {
 	cd "$BUILDDIR"
 	
 	java -jar $BUILDDIR/openapi-generator-cli.jar \
-		generate -g typescript-node \
+		generate -g typescript-axios \
 		--package-name "$PKG_NAME" \
 		-o "$BUILDDIR/$PROJECT_NAME" \
-		-p npmName="$PROJECT_NAME",npmVersion="$VERSION",typescriptThreePlus=true,supportsES6=true \
+		-p npmName="$PROJECT_NAME",npmVersion="$VERSION",typescriptThreePlus=true,supportsES6=true,withSeparateModelsAndApi=true,apiPackage="src.api",modelPackage="src.models",withInterfaces=true \
 		-i ../ya-client/specs/${NAME}-api.yaml \
-		--skip-validate-spec --strict-spec false \
-		--global-property=apiDocs=false,modelDocs=false
+		--skip-validate-spec --strict-spec false 
 }
 
 gen activity 	0.1.0

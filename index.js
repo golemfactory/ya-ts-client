@@ -4,15 +4,15 @@ Object.defineProperty(exports, "__esModule", {
   });
   exports.yaPayment = exports.yaMarket = exports.yaActivity = void 0;
   
-  var _yaActivity = _interopRequireWildcard(require("./dist/ya-activity/api"));
+  var _yaActivity = _interopRequireWildcard(require("./dist/ya-activity/"));
   
   exports.yaActivity = _yaActivity;
   
-  var _yaMarket = _interopRequireWildcard(require("./dist/ya-market/api"));
+  var _yaMarket = _interopRequireWildcard(require("./dist/ya-market/"));
   
   exports.yaMarket = _yaMarket;
   
-  var _yaPayment = _interopRequireWildcard(require("./dist/ya-payment/api"));
+  var _yaPayment = _interopRequireWildcard(require("./dist/ya-payment/"));
   
   exports.yaPayment = _yaPayment;
   

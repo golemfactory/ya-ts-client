@@ -1,95 +1,41 @@
-diff -r -c target/ya-market/api/providerApi.ts src/ya-market/api/providerApi.ts
-*** target/ya-market/api/providerApi.ts	2020-08-05 10:10:16.000000000 +0200
---- src/ya-market/api/providerApi.ts	2020-07-30 20:58:22.000000000 +0200
+Only in src/ya-market: .DS_Store
+diff -r -c target/ya-market/src/api/provider-api.ts src/ya-market/src/api/provider-api.ts
+*** target/ya-market/src/api/provider-api.ts	2020-09-07 10:44:28.000000000 +0200
+--- src/ya-market/src/api/provider-api.ts	2020-09-07 10:45:04.000000000 +0200
 ***************
-*** 15,21 ****
-  
-  /* tslint:disable:no-unused-locals */
-  import { Agreement } from '../model/agreement';
-! import { AgreementEvent | ProposalEvent | PropertyQueryEvent } from '../model/agreementEvent | ProposalEvent | PropertyQueryEvent';
-  import { ErrorMessage } from '../model/errorMessage';
-  import { Offer } from '../model/offer';
-  import { Proposal } from '../model/proposal';
---- 15,23 ----
-  
-  /* tslint:disable:no-unused-locals */
-  import { Agreement } from '../model/agreement';
-! import { AgreementEvent } from '../model/agreementEvent';
-! import { ProposalEvent } from '../model/proposalEvent';
-! import { PropertyQueryEvent } from '../model/propertyQueryEvent';
-  import { ErrorMessage } from '../model/errorMessage';
-  import { Offer } from '../model/offer';
-  import { Proposal } from '../model/proposal';
-diff -r -c target/ya-market/api/requestorApi.ts src/ya-market/api/requestorApi.ts
-*** target/ya-market/api/requestorApi.ts	2020-08-05 10:10:16.000000000 +0200
---- src/ya-market/api/requestorApi.ts	2020-07-30 20:58:22.000000000 +0200
+*** 22,28 ****
+  // @ts-ignore
+  import { Agreement } from '../../src/models';
+  // @ts-ignore
+! import { AgreementEvent | ProposalEvent | PropertyQueryEvent } from '../../src/models';
+  // @ts-ignore
+  import { ErrorMessage } from '../../src/models';
+  // @ts-ignore
+--- 22,28 ----
+  // @ts-ignore
+  import { Agreement } from '../../src/models';
+  // @ts-ignore
+! import { AgreementEvent, ProposalEvent, PropertyQueryEvent } from '../../src/models';
+  // @ts-ignore
+  import { ErrorMessage } from '../../src/models';
+  // @ts-ignore
+diff -r -c target/ya-market/src/api/requestor-api.ts src/ya-market/src/api/requestor-api.ts
+*** target/ya-market/src/api/requestor-api.ts	2020-09-07 10:44:28.000000000 +0200
+--- src/ya-market/src/api/requestor-api.ts	2020-09-07 10:44:57.000000000 +0200
 ***************
-*** 19,25 ****
-  import { Demand } from '../model/demand';
-  import { ErrorMessage } from '../model/errorMessage';
-  import { Proposal } from '../model/proposal';
-! import { ProposalEvent | PropertyQueryEvent } from '../model/proposalEvent | PropertyQueryEvent';
-  
-  import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
-  import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
---- 19,26 ----
-  import { Demand } from '../model/demand';
-  import { ErrorMessage } from '../model/errorMessage';
-  import { Proposal } from '../model/proposal';
-! import { ProposalEvent } from '../model/proposalEvent';
-! import { PropertyQueryEvent } from '../model/propertyQueryEvent';
-  
-  import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
-  import { HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth } from '../model/models';
-Only in src/ya-market: node_modules
-diff -r -c target/ya-market/package.json src/ya-market/package.json
-*** target/ya-market/package.json	2020-08-05 10:10:16.000000000 +0200
---- src/ya-market/package.json	2020-08-05 10:00:21.000000000 +0200
-***************
-*** 3,14 ****
-      "version": "0.1.0",
-      "description": "NodeJS client for ya-market",
-      "repository": "GIT_USER_ID/GIT_REPO_ID",
-!     "main": "dist/api.js",
-!     "types": "dist/api.d.ts",
-      "scripts": {
-          "clean": "rm -Rf node_modules/ *.js",
-          "build": "tsc",
-!         "test": "npm run build && node dist/client.js"
-      },
-      "author": "OpenAPI-Generator Contributors",
-      "license": "Unlicense",
---- 3,14 ----
-      "version": "0.1.0",
-      "description": "NodeJS client for ya-market",
-      "repository": "GIT_USER_ID/GIT_REPO_ID",
-!     "main": "./api.js",
-!     "types": "./api.d.ts",
-      "scripts": {
-          "clean": "rm -Rf node_modules/ *.js",
-          "build": "tsc",
-!         "test": "npm run build && node ./api.js"
-      },
-      "author": "OpenAPI-Generator Contributors",
-      "license": "Unlicense",
-diff -r -c target/ya-market/tsconfig.json src/ya-market/tsconfig.json
-*** target/ya-market/tsconfig.json	2020-08-05 10:10:16.000000000 +0200
---- src/ya-market/tsconfig.json	2020-07-30 20:58:22.000000000 +0200
-***************
-*** 11,17 ****
-          "noLib": false,
-          "declaration": true,
-          "lib": ["dom", "es6", "es5", "dom.iterable", "scripthost"],
-!         "outDir": "dist",
-          "typeRoots": [
-              "node_modules/@types"
-          ]
---- 11,17 ----
-          "noLib": false,
-          "declaration": true,
-          "lib": ["dom", "es6", "es5", "dom.iterable", "scripthost"],
-!         "outDir": "../../dist/ya-market",
-          "typeRoots": [
-              "node_modules/@types"
-          ]
-Only in src/ya-market: yarn.lock
+*** 30,36 ****
+  // @ts-ignore
+  import { Proposal } from '../../src/models';
+  // @ts-ignore
+! import { ProposalEvent | PropertyQueryEvent } from '../../src/models';
+  /**
+   * RequestorApi - axios parameter creator
+   * @export
+--- 30,36 ----
+  // @ts-ignore
+  import { Proposal } from '../../src/models';
+  // @ts-ignore
+! import { ProposalEvent, PropertyQueryEvent } from '../../src/models';
+  /**
+   * RequestorApi - axios parameter creator
+   * @export
