@@ -1,0 +1,20 @@
+diff -r -c target/ya-activity/src/api/requestor-control-api.ts src/ya-activity/src/api/requestor-control-api.ts
+*** target/ya-activity/src/api/requestor-control-api.ts	2020-10-30 10:11:36.067055556 +0100
+--- src/ya-activity/src/api/requestor-control-api.ts	2020-10-30 10:13:39.488969767 +0100
+***************
+*** 28,34 ****
+  // @ts-ignore
+  import { ExeScriptRequest } from '../../src/models';
+  // @ts-ignore
+! import { string | CreateActivityResult } from '../../src/models';
+  /**
+   * RequestorControlApi - axios parameter creator
+   * @export
+--- 28,34 ----
+  // @ts-ignore
+  import { ExeScriptRequest } from '../../src/models';
+  // @ts-ignore
+! import { CreateActivityResult } from '../../src/models';
+  /**
+   * RequestorControlApi - axios parameter creator
+   * @export
