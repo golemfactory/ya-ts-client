@@ -11,7 +11,7 @@
         "test": "node ./index.js"
     },
     "author": "Golem Team <tech@golem.network>",
-    "license": "Unlicense",
+    "license": "LGPL-3.0-or-later",
     "dependencies": {
         "@types/bluebird": "*",
         "@types/request": "*",
