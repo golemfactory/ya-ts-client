@@ -4,6 +4,8 @@ patches/
 node_modules/
 src/
 target/
+.github/
+.gitmodules/
 ya-client/
 m.*
 *.lock
