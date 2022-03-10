@@ -19,11 +19,13 @@ m.build: m.patch
 	cd src/ya-activity && yarn && yarn build
 	cd src/ya-market && yarn && yarn build
 	cd src/ya-payment && yarn && yarn build
+	cd src/ya-net && yarn && yarn build
 
-	mkdir -p dist/ya-activity dist/ya-market dist/ya-payment
+	mkdir -p dist/ya-activity dist/ya-market dist/ya-payment dist/ya-net
 	cp -r src/ya-activity/dist/* dist/ya-activity
 	cp -r src/ya-market/dist/* dist/ya-market
 	cp -r src/ya-payment/dist/* dist/ya-payment
+	cp -r src/ya-net/dist/* dist/ya-net
 
 clean:
 	find target \! -name 'openapi-generator-cli.jar' -delete
