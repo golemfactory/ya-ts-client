@@ -1,6 +1,6 @@
 #! /bin/bash
 
-MODULES="market payment activity"
+MODULES="market payment activity net"
 
 fail() {
 	echo $@ >&2
