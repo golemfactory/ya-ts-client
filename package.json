@@ -1,6 +1,6 @@
 {
     "name": "ya-ts-client",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "description": "NodeJS client for Golem",
     "repository": "https://github.com/mdtanrikulu/ya-ts-client.git",
     "main": "./index.js",
@@ -13,15 +13,10 @@
     "author": "Golem Team <tech@golem.network>",
     "license": "LGPL-3.0-or-later",
     "dependencies": {
-        "@types/bluebird": "*",
-        "@types/request": "*",
-        "bluebird": "^3.5.0",
-        "request": "^2.81.0",
-        "rewire": "^3.0.2",
-        "start": "^5.1.0"
+        "axios": "^0.21.4"
     },
     "devDependencies": {
-        "typescript": "^2.4.2",
-        "@types/node": "8.10.34"
+        "@types/node": "^12.11.5",
+        "typescript": "^3.6.4"
     }
 }
