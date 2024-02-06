@@ -7,7 +7,8 @@
   "types": "./index.d.ts",
   "scripts": {
     "clean": "rm -Rf node_modules/ *.js",
-    "build": "tsc --project tsconfig.json",
+    "build": "make clean; make setup; make m.build",
+    "build:compile": "tsc --project tsconfig.json",
     "test": "node ./index.js"
   },
   "author": "Golem Team <tech@golem.network>",

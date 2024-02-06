@@ -16,10 +16,10 @@ m.patch: m.setup
 	touch m.patch
 
 m.build: m.patch
-	cd src/ya-activity && yarn && yarn build
-	cd src/ya-market && yarn && yarn build
-	cd src/ya-payment && yarn && yarn build
-	cd src/ya-net && yarn && yarn build
+	cd src/ya-activity && npm i && npm run build
+	cd src/ya-market && npm i && npm run build
+	cd src/ya-payment && npm i && npm run build
+	cd src/ya-net && npm i && npm run build
 
 	mkdir -p dist/ya-activity dist/ya-market dist/ya-payment dist/ya-net
 	cp -r src/ya-activity/dist/* dist/ya-activity
