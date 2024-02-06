@@ -23,7 +23,7 @@ gen() {
 	cd "$BUILDDIR"
 
 	java -jar $BUILDDIR/openapi-generator-cli.jar \
-		generate -g typescript-axios \
+		generate -g typescript-fetch \
 		--package-name "$PKG_NAME" \
 		-o "$BUILDDIR/$PROJECT_NAME" \
 		-p npmName="$PROJECT_NAME",npmVersion="$VERSION",typescriptThreePlus=true,supportsES6=true,withSeparateModelsAndApi=true,apiPackage="src.api",modelPackage="src.models",withInterfaces=true \

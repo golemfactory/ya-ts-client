@@ -1,22 +1,19 @@
 {
-    "name": "ya-ts-client",
-    "version": "0.5.3",
-    "description": "NodeJS client for Golem",
-    "repository": "https://github.com/mdtanrikulu/ya-ts-client.git",
-    "main": "./index.js",
-    "types": "./index.d.ts",
-    "scripts": {
-        "clean": "rm -Rf node_modules/ *.js",
-        "build": "tsc",
-        "test": "node ./index.js"
-    },
-    "author": "Golem Team <tech@golem.network>",
-    "license": "LGPL-3.0-or-later",
-    "dependencies": {
-        "axios": "^0.21.4"
-    },
-    "devDependencies": {
-        "@types/node": "^12.11.5",
-        "typescript": "^3.6.4"
-    }
+  "name": "ya-ts-client",
+  "version": "0.5.3",
+  "description": "NodeJS client for Golem",
+  "repository": "https://github.com/golemfactory/ya-ts-client.git",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "clean": "rm -Rf node_modules/ *.js",
+    "build": "tsc --project tsconfig.json",
+    "test": "node ./index.js"
+  },
+  "author": "Golem Team <tech@golem.network>",
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "^18.18.9",
+    "typescript": "^5.2.2"
+  }
 }

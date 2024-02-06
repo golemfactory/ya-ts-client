@@ -28,7 +28,7 @@ m.build: m.patch
 	cp -r src/ya-net/dist/* dist/ya-net
 
 clean:
-	find target \! -name 'openapi-generator-cli.jar' -delete
+	rm -rf target/ dist/
 	rm m.*
 
 .PHONY: all
