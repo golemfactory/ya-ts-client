@@ -1,6 +1,4 @@
 node_modules/
 dist/
-target/
-m.*
-*.lock
-package-lock.json
+.vscode/
+.idea/
