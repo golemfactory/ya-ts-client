@@ -24,6 +24,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@nicolas-chaulet/openapi-typescript-codegen": "^0.27.11",
     "openapi-typescript-codegen": "^0.27.0"
   }
 }
