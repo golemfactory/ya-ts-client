@@ -20,8 +20,15 @@ async function generate(file, module, moduleName) {
     httpClient: "fetch",
   });
 
+  // Export the client via the main index.ts file
   execSync(
     `echo 'export * as ${moduleName} from "./${module}"' >> ./generated/index.ts`,
+  );
+
+  // Export the FetchHttpRequest implementation to re-use in other places of the SDK, where the official specs/bindings are not necessary
+  // #FIXME: We need to have proper bindings to these endpoints, and once golem-js is not using this borrowed implementation, we can remove this line
+  execSync(
+    `echo 'export { FetchHttpRequest } from "./core/FetchHttpRequest"' >> ./generated/${module}/index.ts`,
   );
 }
 

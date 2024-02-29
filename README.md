@@ -1,14 +1,14 @@
 # Yagna TS Client
 
 The `ya-ts-client` package provides low level API bindings in form of collection TypeScript clients generated from
-the  [Yagna public API](https://github.com/golemfactory/ya-client) OpenApi specifications.
+the [Yagna public API](https://github.com/golemfactory/ya-client) OpenApi specifications.
 
 The primary and only purpose of this package is to provide that basic implementation. As a "core" library, it shouldn't need to be added as a dependency to any user code, only to other Golem Network related SDKs or libraries.
 
 If you want to start building solutions using Golem Network, here are more suitable options:
 
-* [Official JS SDK - @golem-sdk/golem-js](https://www.npmjs.com/package/@golem-sdk/golem-js) - which models the Decentralized Computation Marketplace logic
-* [TaskExecutor - @golem-sdk/task-executor](https://www.npmjs.com/package/@golem-sdk/task-executor) - built on top of `@golem-sdk/golem-js` and provides a "task oriented" API for simple distributed computation scenarios
+- [Official JS SDK - @golem-sdk/golem-js](https://www.npmjs.com/package/@golem-sdk/golem-js) - which models the Decentralized Computation Marketplace logic
+- [TaskExecutor - @golem-sdk/task-executor](https://www.npmjs.com/package/@golem-sdk/task-executor) - built on top of `@golem-sdk/golem-js` and provides a "task oriented" API for simple distributed computation scenarios
 
 ## Installation
 
