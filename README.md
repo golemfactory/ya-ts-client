@@ -1,34 +1,42 @@
-# ya-ts-client
+# Yagna TS Client
 
-Typescript client generated for the [Yagna public API](https://github.com/golemfactory/ya-client) openapi specification. The client is generated using [openapi-typescript-codegen](https://github.com/ferdikoomen/openapi-typescript-codegen).
+The `ya-ts-client` package provides low level API bindings in form of collection TypeScript clients generated from
+the  [Yagna public API](https://github.com/golemfactory/ya-client) OpenApi specifications.
 
-## Generating a new version of the client
+The primary and only purpose of this package is to provide that basic implementation. As a "core" library, it shouldn't need to be added as a dependency to any user code, only to other Golem Network related SDKs or libraries.
 
-Clone this repository with submodules included:
+If you want to start building solutions using Golem Network, here are more suitable options:
 
-```bash
-git clone --recurse-submodules git@github.com:golemfactory/ya-ts-client.git
-```
+* [Official JS SDK - @golem-sdk/golem-js](https://www.npmjs.com/package/@golem-sdk/golem-js) - which models the Decentralized Computation Marketplace logic
+* [TaskExecutor - @golem-sdk/task-executor](https://www.npmjs.com/package/@golem-sdk/task-executor) - built on top of `@golem-sdk/golem-js` and provides a "task oriented" API for simple distributed computation scenarios
 
-Install the dependencies:
-
-```bash
-npm install
-```
-
-Update the ya-client submodule to your desired version:
+## Installation
 
 ```bash
-cd ya-client
-git checkout <desired_version>
-cd ..
+npm install --save ya-ts-client
 ```
 
-Generate the client:
+## Usage
 
-```bash
-npm run generate
+The library exposes multiple API clients which are auto-generated from the official OpenApi specifications.
+
+```ts
+/**
+ * Example of usage of the Payment API
+ */
+const client = new Payment.ApiClient({
+  BASE: "http://localhost:7465/payment-api/v1",
+  HEADERS: {
+    Authorization: "Bearer your-app-key",
+  },
+});
+
+const response = await client.requestor.getAllocations();
 ```
 
-At this point the client should be generated and transpiled to javascript in the `dist` directory.
-The package is ready to be published to npm. Do not forget to update the version in `package.json` before publishing.
+The documentation of the generated API is [hosted on GitHub pages](https://golemfactory.github.io/ya-ts-client/).
+
+## See also
+
+- [Official Golem JS SDK repo](https://github.com/golemfactory/golem-js)
+- [Documentation for JS Creators](https://docs.golem.network/docs/creators/javascript)

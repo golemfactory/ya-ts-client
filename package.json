@@ -1,7 +1,8 @@
 {
   "name": "ya-ts-client",
   "version": "0.5.3",
-  "description": "Typescript client for Yagna public API",
+  "description": "TypeScript generated API clients for various Yagna public APIs. Core library for Golem Network related libraries and SDKs",
+  "keywords": ["golem", "network", "distributed", "computing", "yagna", "rest", "api", "client"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/golemfactory/ya-ts-client.git"
@@ -15,21 +16,23 @@
     "clean": "rimraf ./generated ./dist",
     "generate": "npm run clean && node ./generate.js && tsc",
     "compile": "tsc",
-    "format": "prettier -w ."
+    "format": "prettier -w .",
+    "docs": "typedoc --excludeExternals --excludeProtected --excludePrivate --disableSources generated/index.ts",
+    "build": "npm run generate && npm run docs"
   },
   "author": "GolemFactory <contact@golem.network>",
   "license": "LGPL-3.0",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@types/node": "^12.11.5",
     "jest": "^29.7.0",
     "json-schema-ref-parser": "^9.0.9",
+    "openapi-typescript-codegen": "^0.27.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "typescript": "^5.3.3",
-    "@types/jest": "^29.5.12",
-    "openapi-typescript-codegen": "^0.27.0"
+    "typedoc": "^0.25.9",
+    "typescript": "^5.3.3"
   },
-  "dependencies": {},
   "engines": {
     "node": ">=18.0.0"
   }
