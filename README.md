@@ -1,4 +1,4 @@
-# YA-TS-Client
+# ya-ts-client
 
 Typescript client generated for the [Yagna public API](https://github.com/golemfactory/ya-client) openapi specification. The client is generated using [openapi-typescript-codegen](https://github.com/ferdikoomen/openapi-typescript-codegen).
 
@@ -30,4 +30,5 @@ Generate the client:
 npm run generate
 ```
 
-At this point the client should be generated and transpiled to javascript in the `dist` directory. The package is ready to be published to npm. Do not forget to update the version in `package.json` before publishing.
+At this point the client should be generated and transpiled to javascript in the `dist` directory.
+The package is ready to be published to npm. Do not forget to update the version in `package.json` before publishing.
