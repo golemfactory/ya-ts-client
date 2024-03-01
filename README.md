@@ -18,23 +18,54 @@ npm install --save ya-ts-client
 
 ## Usage
 
-The library exposes multiple API clients which are auto-generated from the official OpenApi specifications.
+The library exposes multiple API clients which are auto-generated from the official OpenApi specifications. The documentation of the generated API is [hosted on GitHub pages](https://golemfactory.github.io/ya-ts-client/).
+
+### Working with API Clients
+
+Here's just one example of how to use the `Payment` module's `ApiClient` to obtain the list of allocations.
 
 ```ts
+import { Payment } from "ya-ts-client";
+
 /**
  * Example of usage of the Payment API
  */
-const client = new Payment.ApiClient({
+const payment = new Payment.ApiClient({
   BASE: "http://localhost:7465/payment-api/v1",
   HEADERS: {
     Authorization: "Bearer your-app-key",
   },
 });
 
-const response = await client.requestor.getAllocations();
+const allocations = await payment.requestor.getAllocations();
 ```
 
-The documentation of the generated API is [hosted on GitHub pages](https://golemfactory.github.io/ya-ts-client/).
+### Working with `enum` types generated for the library
+
+In cases where you would like to make use of the `enums` available in the generated modules, this snippet explains how to do it:
+
+```ts
+// Reach for the module you need
+import { Activity } from "ya-ts-client";
+
+// You can import the enum from the **namespace** like that
+import ResultEnum = Activity.ExeScriptCommandResult.result;
+// Simple alias lie this one won't work
+// type ResultEnum = Activity.ExeScriptCommandResult.result; // INVALID!!!
+
+export interface YaTsTest {
+  // Then refer to it via the alias
+  result: ResultEnum;
+}
+
+// Check it yourself :)
+const x: YaTsTest = {
+  result: ResultEnum.OK,
+};
+
+// Outputs: { result: 'Ok' }
+console.log(x);
+```
 
 ## See also
 
