@@ -43,7 +43,8 @@ async function generate(file, module, moduleName) {
   );
   await generate("ya-client/specs/payment-api.yaml", "payment-api", "Payment");
   await generate("ya-client/specs/net-api.yaml", "net-api", "Net");
-  await generate("ya-client/specs/net-api-v2.yaml", "net-api-v2", "NetV2");
+  // Note: This API is going to be removed, and we shouldn't generate clients for this
+  // await generate("ya-client/specs/net-api-v2.yaml", "net-api-v2", "NetV2");
   await generate("ya-client/specs/gsb-api.yaml", "gsb-api", "Gsb");
 })();
 
