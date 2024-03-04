@@ -40,33 +40,6 @@ const payment = new Payment.ApiClient({
 const allocations = await payment.requestor.getAllocations();
 ```
 
-### Working with `enum` types generated for the library
-
-In cases where you would like to make use of the `enums` available in the generated modules, this snippet explains how to do it:
-
-```ts
-// Reach for the module you need
-import { Activity } from "ya-ts-client";
-
-// You can import the enum from the **namespace** like that
-import ResultEnum = Activity.ExeScriptCommandResult.result;
-// Simple alias lie this one won't work
-// type ResultEnum = Activity.ExeScriptCommandResult.result; // INVALID!!!
-
-export interface YaTsTest {
-  // Then refer to it via the alias
-  result: ResultEnum;
-}
-
-// Check it yourself :)
-const x: YaTsTest = {
-  result: ResultEnum.OK,
-};
-
-// Outputs: { result: 'Ok' }
-console.log(x);
-```
-
 ## See also
 
 - [Official Golem JS SDK repo](https://github.com/golemfactory/golem-js)
