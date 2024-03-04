@@ -18,6 +18,7 @@ async function generate(file, module, moduleName) {
     output: `./generated/${module}`,
     clientName: "ApiClient",
     httpClient: "fetch",
+    useUnionTypes: true
   });
 
   // Export the client via the main index.ts file
