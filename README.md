@@ -25,12 +25,14 @@ The library exposes multiple API clients which are auto-generated from the offic
 Here's just one example of how to use the `Payment` module's `ApiClient` to obtain the list of allocations.
 
 ```ts
-import { Payment } from "ya-ts-client";
+import { PaymentApi } from "ya-ts-client";
+// Or refer to the whole library:
+//import * as YaTsClient from "ya-ts-client";
 
 /**
  * Example of usage of the Payment API
  */
-const payment = new Payment.ApiClient({
+const payment = new PaymentApi.Client({
   BASE: "http://localhost:7465/payment-api/v1",
   HEADERS: {
     Authorization: "Bearer your-app-key",
@@ -38,6 +40,7 @@ const payment = new Payment.ApiClient({
 });
 
 const allocations = await payment.requestor.getAllocations();
+console.log("Allocated funds:", allocations);
 ```
 
 ## See also
