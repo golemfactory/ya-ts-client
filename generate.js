@@ -50,6 +50,11 @@ async function generateApiModule(specFile, moduleDir, moduleName) {
   // Note: This API is going to be removed, and we shouldn't generateApiModule clients for this
   // await generateApiModule("ya-client/specs/net-api-v2.yaml", "net-api-v2", "NetV2");
   await generateApiModule("ya-client/specs/gsb-api.yaml", "gsb-api", "Gsb");
+  await generateApiModule("ya-client/specs/identity-api.yaml", "identity", "Identity");
+  await generateApiModule("ya-client/specs/version-api.yaml",
+    "version",
+    "Version",
+  );
 })();
 
 // Note: Don't try it - asyncapi :)
