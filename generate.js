@@ -16,7 +16,7 @@ async function generateApiModule(specFile, moduleDir, moduleName) {
   await OpenAPI.generate({
     input: oas,
     output: `./generated/${moduleDir}`,
-    clientName: "ApiClient",
+    clientName: "Client",
     httpClient: "fetch",
     useUnionTypes: true,
     postfixModels: "DTO",
