@@ -27,20 +27,21 @@
     "compile": "tsc",
     "format": "prettier -w .",
     "docs": "typedoc --excludeExternals --excludeProtected --excludePrivate --disableSources generated/index.ts",
-    "build": "npm run generate && npm run docs"
+    "build": "npm run generate && npm run docs",
+    "test": "jest test/"
   },
   "author": "GolemFactory <contact@golem.network>",
   "license": "LGPL-3.0",
   "devDependencies": {
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.2",
+    "@types/node": "^20.12.7",
     "jest": "^29.7.0",
     "json-schema-ref-parser": "^9.0.9",
-    "openapi-typescript-codegen": "^0.28.0",
+    "openapi-typescript-codegen": "^0.29.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "typedoc": "^0.25.9",
-    "typescript": "^5.3.3"
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=18.0.0"
