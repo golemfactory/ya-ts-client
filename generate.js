@@ -22,7 +22,7 @@ async function generateApiModule(specFile, moduleDir, moduleName) {
     postfixModels: "DTO",
   });
 
-  const exportedName = `${moduleName}Api`
+  const exportedName = `${moduleName}Api`;
 
   // Export the client via the main index.ts file
   execSync(
@@ -39,19 +39,32 @@ async function generateApiModule(specFile, moduleDir, moduleName) {
 (async () => {
   mkdirSync("./generated");
 
-  await generateApiModule("ya-client/specs/market-api.yaml", "market-api", "Market");
+  await generateApiModule(
+    "ya-client/specs/market-api.yaml",
+    "market-api",
+    "Market",
+  );
   await generateApiModule(
     "ya-client/specs/activity-api.yaml",
     "activity-api",
     "Activity",
   );
-  await generateApiModule("ya-client/specs/payment-api.yaml", "payment-api", "Payment");
+  await generateApiModule(
+    "ya-client/specs/payment-api.yaml",
+    "payment-api",
+    "Payment",
+  );
   await generateApiModule("ya-client/specs/net-api.yaml", "net-api", "Net");
   // Note: This API is going to be removed, and we shouldn't generateApiModule clients for this
   // await generateApiModule("ya-client/specs/net-api-v2.yaml", "net-api-v2", "NetV2");
   await generateApiModule("ya-client/specs/gsb-api.yaml", "gsb-api", "Gsb");
-  await generateApiModule("ya-client/specs/identity-api.yaml", "identity", "Identity");
-  await generateApiModule("ya-client/specs/version-api.yaml",
+  await generateApiModule(
+    "ya-client/specs/identity-api.yaml",
+    "identity",
+    "Identity",
+  );
+  await generateApiModule(
+    "ya-client/specs/version-api.yaml",
     "version",
     "Version",
   );
