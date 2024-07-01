@@ -1,6 +1,6 @@
 {
   "name": "ya-ts-client",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "TypeScript generated API clients for various Yagna public APIs. Core library for Golem Network related libraries and SDKs",
   "keywords": [
     "golem",
